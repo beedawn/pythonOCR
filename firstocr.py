@@ -1,4 +1,6 @@
 import pytesseract
+import os
+import os.path
 import argparse
 import cv2
 import tempfile
@@ -18,6 +20,7 @@ except:
         
 
 
+
 #creates temp dir for image storage
 temp_dir = tempfile.TemporaryDirectory()
 temp_dir_final = temp_dir.name
@@ -29,8 +32,24 @@ args=vars(ap.parse_args())
 
 pdf_file=args["pdf"]
 
+if os.path.isfile(pdf_file)!=True:
+    print("Invalid filepath")
+    exit()
+    
+
+
+try:
+   pdfinfo_from_path(pdf_file, userpw=None)
+except:
+    print("Please install poppler")
+    exit()
+
+
+
 pdfinfo=pdfinfo_from_path(pdf_file, userpw=None)
 maxPages = pdfinfo["Pages"]
+
+
 
 
 def wipeOutput():
