@@ -3,4 +3,3 @@ opencv-python
 pdf2image
 alive-progress
 tesseract
-tesseract-ocr
