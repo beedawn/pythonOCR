@@ -15,7 +15,7 @@ frm.grid()
 item = StringVar()
 output = StringVar()
 console_out = StringVar()
-
+headless_script="headless.py"
 root.title("pythonOCR")
 
 def select_file():
@@ -36,9 +36,9 @@ def process_file():
     console_out.set("")
     console_out.set("Processing")
     if len(output.get()) > 0:
-        cmd = [sys.executable, os.path.join(current_working_directory, 'firstocr_win.py'), '-p', item.get(), '-o', output.get()]
+        cmd = [sys.executable, os.path.join(current_working_directory, headless_script), '-p', item.get(), '-o', output.get()]
     else:
-        cmd = [sys.executable, os.path.join(current_working_directory, 'firstocr_win.py'), '-p', item.get()]
+        cmd = [sys.executable, os.path.join(current_working_directory, headless_script), '-p', item.get()]
 
     print(cmd)
     process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
