@@ -59,6 +59,10 @@ pip install opencv-python
 pip install pytesseract
 pip install alive-progress
 
+Install Visual Studio build tools:
+https://visualstudio.microsoft.com/downloads/
+Install the C++ Desktop
+
 
 Run Your Script:
 With all the dependencies installed, you can now run your Python script. Open a command prompt, navigate to the directory where your script is located, and execute it using the following command:
