@@ -46,6 +46,7 @@ Open a command prompt or terminal and use pip to install the required Python lib
 
 Install Visual Studio build tools:
 https://visualstudio.microsoft.com/downloads/
+
 Install the C++ Desktop
 
 
