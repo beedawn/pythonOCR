@@ -22,14 +22,14 @@ def select_file():
     file = asksaveasfile(filetypes=[('TXT', '*.txt')])
 
     if file is not None:
-        print(file.name)
+        #print(file.name)
         output.set(file.name)
         file.close()
 
 def open_file():
     file = askopenfile(mode='r', filetypes=[('PDF', '*.pdf')])
     if file is not None:
-        print(file.name)
+        #print(file.name)
         item.set(file.name)
 
 def process_file():
@@ -40,7 +40,7 @@ def process_file():
     else:
         cmd = [sys.executable, os.path.join(current_working_directory, headless_script), '-p', item.get()]
 
-    print(cmd)
+    #print(cmd)
     process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
     
     while process.poll() is None:
