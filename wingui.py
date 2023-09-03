@@ -28,7 +28,7 @@ def open_file():
         print(file.name)
         item.set(file.name)
 
-def process_file():
+def process_file(pb):
     console_out.set("")
     console_out.set("Processing")
     script_path = r".\firstocr.py"  # Use raw string or double backslashes for Windows paths
@@ -53,16 +53,16 @@ def process_file():
     
     pb.stop()
 
-def pb_start():
+def pb_start(pb):
     pb.start()
 
-def pb_stop():
+def pb_stop(pb):
     pb.stop()
 
 pb = ttk.Progressbar(root, orient='horizontal', mode='indeterminate', length=280)
 pb.grid(column=0, row=2)
 
-Button(root, text='Process', command=lambda: [pb_start(), threading.Thread(target=process_file).start()]).grid(column=0, row=4)
+Button(root, text='Process', command=lambda: [pb_start(pb), threading.Thread(target=process_file, args=(pb,)).start()]).grid(column=0, row=4)
 
 ttk.Label(frm, text="File Input").grid(column=0, row=1)
 ttk.Button(frm, text="Open", command=lambda: open_file()).grid(column=1, row=1)
