@@ -14,26 +14,33 @@ console_out = StringVar()
 
 root.title("pythonOCR")
 
+selected_input_file = ""  # Store the selected input file name
+selected_output_file = ""  # Store the selected output file name
+
 def select_file():
+    global selected_output_file
     file = asksaveasfile(filetypes=[('TXT', '*.txt')])
 
     if file is not None:
-        print(file.name)
-        output.set(file.name)
+        selected_output_file = file.name  # Store the selected output file name
+        print(selected_output_file)
+        output.set(selected_output_file)
         file.close()
 
 def open_file():
+    global selected_input_file
     file = askopenfile(mode='r', filetypes=[('PDF', '*.pdf')])
     if file is not None:
-        print(file.name)
-        item.set(file.name)
+        selected_input_file = file.name  # Store the selected input file name
+        print(selected_input_file)
+        item.set(selected_input_file)
 
 def process_file(pb):
     console_out.set("")
     console_out.set("Processing")
     script_path = r".\firstocr.py"  # Use raw string or double backslashes for Windows paths
-    input_path = item.get()
-    output_path = output.get()
+    input_path = selected_input_file
+    output_path = selected_output_file
     
     if len(output_path) > 0:
         cmd = f"python {script_path} -p '{input_path}' -o '{output_path}'"
