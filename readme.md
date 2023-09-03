@@ -70,8 +70,6 @@ With all the dependencies installed, you can now run your Python script. Open a 
 python your_script_name.py -p your_pdf_file.pdf
 Replace your_script_name.py with the actual name of your Python script and your_pdf_file.pdf with the path to the PDF file you want to process.
 
-By following these steps and ensuring that all dependencies are properly installed and configured, your script should run successfully on a Windows system. If you encounter any issues during installation or execution, please provide specific error messages, and I'll be happy to assist further.
-
 
 
 
