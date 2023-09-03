@@ -14,6 +14,9 @@ console_out = StringVar()
 
 root.title("pythonOCR")
 
+pb = ttk.Progressbar(root, orient='horizontal', mode='indeterminate', length=280)
+pb.grid(column=0, row=2)
+
 def select_file():
     file = asksaveasfile(filetypes=[('TXT', '*.txt')])
 
@@ -55,8 +58,7 @@ def pb_start():
 def pb_stop():
     pb.stop()
 
-pb = ttk.Progressbar(root, orient='horizontal', mode='indeterminate', length=280)
-pb.grid(column=0, row=2)
+
 
 # Create a thread for the file processing
 processing_thread = None
