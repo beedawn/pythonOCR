@@ -1,32 +1,19 @@
 
 
-Installer script:
-pip install -r requirements.txt
+# Installer script:
+>pip install -r requirements.txt
 
 
 
-Requires Tesseract:
-on Linux: sudo apt-get install tesseract-ocr
+##Requires Tesseract:
+### Linux: 
+>sudo apt-get install tesseract-ocr
 
-on mac: brew install tesseract
-
-on windows please visit: https://github.com/tesseract-ocr/tessdoc for the binary file
-
-https://github.com/UB-Mannheim/tesseract/wiki
+### Mac: 
+>brew install tesseract
 
 
-https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-5.3.1.20230401.exe
-
-https://digi.bib.uni-mannheim.de/tesseract/
-
-
-
-
-WINDOWS:
-
-
-
-To run your Python script on Windows, you'll need to ensure that you have the necessary dependencies installed and configured correctly. Here's a step-by-step guide to help you get your script up and running on a Windows system:
+### Windows:
 
 Install Python:
 If you haven't already, download and install Python for Windows from the official Python website (https://www.python.org/downloads/windows/). Make sure to select the option to add Python to your PATH during installation.
@@ -37,7 +24,9 @@ Download the Tesseract installer for Windows from the Tesseract GitHub page (htt
 
 Run the Tesseract installer, and during installation, make sure to check the option to add Tesseract to your system PATH. This is crucial for your script to find Tesseract.
 
-After installation, open a new command prompt and run tesseract --version to verify that Tesseract is installed and accessible from the command line.
+After installation, open a new command prompt and run 
+>tesseract --version
+to verify that Tesseract is installed and accessible from the command line.
 
 Install Poppler:
 Your script uses Poppler for processing PDF files. To install Poppler on Windows, you can follow these steps:
@@ -53,11 +42,10 @@ Add the path to the directory containing the Poppler executable files (e.g., bin
 Install Python Libraries:
 Open a command prompt or terminal and use pip to install the required Python libraries for your script. Run the following commands:
 
-
-pip install pdf2image
-pip install opencv-python
-pip install pytesseract
-pip install alive-progress
+>pip install pdf2image
+>pip install opencv-python
+>pip install pytesseract
+>pip install alive-progress
 
 Install Visual Studio build tools:
 https://visualstudio.microsoft.com/downloads/
@@ -67,7 +55,7 @@ Install the C++ Desktop
 Run Your Script:
 With all the dependencies installed, you can now run your Python script. Open a command prompt, navigate to the directory where your script is located, and execute it using the following command:
 
-python your_script_name.py -p your_pdf_file.pdf
+>>python your_script_name.py -p your_pdf_file.pdf
 Replace your_script_name.py with the actual name of your Python script and your_pdf_file.pdf with the path to the PDF file you want to process.
 
 
