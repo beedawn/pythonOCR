@@ -58,7 +58,7 @@ With all the dependencies installed, you can now run your Python script. Open a 
 If you'd like to specify output path:
 >python headless.py -p your_pdf_file.pdf -o output_file_path
 # GUI
-If you'd like to use the GUI, run the following script:
+If you'd like to use the GUI, run the following script from within the project:
 > python gui.py
 
 
