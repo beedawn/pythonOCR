@@ -1,5 +1,5 @@
 import subprocess
-import multiprocessing
+import threading
 import time
 from tkinter import *
 from tkinter import ttk
@@ -55,18 +55,26 @@ def pb_start():
 def pb_stop():
     pb.stop()
 
-if __name__ == "__main__":
-    pb = ttk.Progressbar(frm, orient='horizontal', mode='indeterminate', length=280)
-    pb.grid(column=0, row=5)
+pb = ttk.Progressbar(root, orient='horizontal', mode='indeterminate', length=280)
+pb.grid(column=0, row=2)
 
-    Button(root, text='Process', command=lambda: [pb_start(), multiprocessing.Process(target=process_file).start()]).grid(column=2, row=2)
+# Create a thread for the file processing
+processing_thread = None
 
-    ttk.Label(frm, text="File Input").grid(column=0, row=1)
-    ttk.Button(frm, text="Open", command=lambda: open_file()).grid(column=1, row=1)
-    ttk.Label(frm, textvariable=item, width=40).grid(column=2, row=1)
-    ttk.Label(frm, text="Output").grid(column=0, row=2)
-    ttk.Button(frm, text="Select", command=lambda: select_file()).grid(column=1, row=2)
-    ttk.Label(frm, textvariable=output, width=40).grid(column=2, row=2)
-    ttk.Label(frm, textvariable=console_out).grid(column=0, row=3)
+def start_processing_thread():
+    global processing_thread
+    if processing_thread is None or not processing_thread.is_alive():
+        processing_thread = threading.Thread(target=process_file)
+        processing_thread.start()
 
-    root.mainloop()
+Button(root, text='Process', command=lambda: [pb_start(), start_processing_thread()]).grid(column=0, row=4)
+
+ttk.Label(frm, text="File Input").grid(column=0, row=1)
+ttk.Button(frm, text="Open", command=lambda: open_file()).grid(column=1, row=1)
+ttk.Label(frm, textvariable=item, width=40).grid(column=2, row=1)
+ttk.Label(frm, text="Output").grid(column=0, row=2)
+ttk.Button(frm, text="Select", command=lambda: select_file()).grid(column=1, row=2)
+ttk.Label(frm, textvariable=output, width=40).grid(column=2, row=2)
+ttk.Label(root, textvariable=console_out).grid(column=0, row=3)
+
+root.mainloop()
