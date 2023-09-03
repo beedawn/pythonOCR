@@ -1,6 +1,4 @@
 import pytesseract
-import os
-import os.path
 import argparse
 import cv2
 import tempfile
@@ -16,9 +14,10 @@ try:
 except:
     print("Please install Tesseract.")
     print("See readme for details.")
+
+    print("Installer script: pip install -r requirements.txt\nRequires Tesseract: on Linux: sudo apt-get install tesseract-ocr\non mac: brew install tesseract\non windows please visit: https://github.com/tesseract-ocr/tessdoc for the binary file\nhttps://github.com/UB-Mannheim/tesseract/wiki\nhttps://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-5.3.1.20230401.exe\nhttps://digi.bib.uni-mannheim.de/tesseract/")
     exit()
         
-
 
 
 #creates temp dir for image storage
@@ -28,33 +27,26 @@ temp_dir_final = temp_dir.name
 #parse arguments
 ap = argparse.ArgumentParser()
 ap.add_argument("-p","--pdf",required=True, help="path to pdf")
+ap.add_argument("-o","--output",required=False, help="path to output")
 args=vars(ap.parse_args())
 
 pdf_file=args["pdf"]
-
-if os.path.isfile(pdf_file)!=True:
-    print("Invalid filepath")
-    exit()
-    
-
-
-try:
-   pdfinfo_from_path(pdf_file, userpw=None)
-except:
-    print("Please install poppler")
-    exit()
-
-
 
 pdfinfo=pdfinfo_from_path(pdf_file, userpw=None)
 maxPages = pdfinfo["Pages"]
 
 
 
+if args["output"] is not None:
+    output_path= args["output"]
+    #print("output def: "+ output_path)
+else:
+    output_path= "output.txt"
+    #print("ouput undef: "+output_path)
 
 def wipeOutput():
     #could be prompt for rewrite of old output file here
-    f=open("output.txt","w")
+    f=open(output_path,"w")
     f.write("")
     f.close()
 
@@ -68,7 +60,7 @@ def processpage(images,page):
 
 
 def converttext():
-    f=open("output.txt","a")
+    f=open(output_path,"a")
     #array so we can add file names to it, to sort
     file_list=[]
     #go through array and add to file_list
