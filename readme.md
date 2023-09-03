@@ -3,15 +3,12 @@
 # Installer script:
 >pip install -r requirements.txt
 
-
-
 ## Requires Tesseract:
 ### Linux: 
 >sudo apt-get install tesseract-ocr
 
 ### Mac: 
 >brew install tesseract
-
 
 ### Windows:
 
@@ -52,13 +49,17 @@ https://visualstudio.microsoft.com/downloads/
 Install the C++ Desktop
 
 
+# Usage
 Run Your Script:
 With all the dependencies installed, you can now run your Python script. Open a command prompt, navigate to the directory where your script is located, and execute it using the following command:
 
->python your_script_name.py -p your_pdf_file.pdf
+>python headless.py -p your_pdf_file.pdf
 
-Replace your_script_name.py with the actual name of your Python script and your_pdf_file.pdf with the path to the PDF file you want to process.
-
+If you'd like to specify output path:
+>python headless.py -p your_pdf_file.pdf -o output_file_path
+# GUI
+If you'd like to use the GUI, run the following script:
+> python gui.py
 
 
 
