@@ -55,7 +55,8 @@ Install the C++ Desktop
 Run Your Script:
 With all the dependencies installed, you can now run your Python script. Open a command prompt, navigate to the directory where your script is located, and execute it using the following command:
 
->>python your_script_name.py -p your_pdf_file.pdf
+>python your_script_name.py -p your_pdf_file.pdf
+
 Replace your_script_name.py with the actual name of your Python script and your_pdf_file.pdf with the path to the PDF file you want to process.
 
 
