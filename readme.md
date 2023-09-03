@@ -5,7 +5,7 @@
 
 
 
-##Requires Tesseract:
+## Requires Tesseract:
 ### Linux: 
 >sudo apt-get install tesseract-ocr
 
