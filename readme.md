@@ -45,8 +45,9 @@ Open a command prompt or terminal and use pip to install the required Python lib
 >pip install alive-progress
 
 Install Visual Studio build tools:
-https://visualstudio.microsoft.com/downloads/
+https://visualstudio.microsoft.com/downloads/ (may be too much)
 
+https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170 (leaner)
 Install the C++ Desktop within Visual Studio Build Tool Installer.
 
 
