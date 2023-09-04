@@ -9,6 +9,18 @@ from tkinter.filedialog import askopenfile, asksaveasfile
 
 current_working_directory = os.path.dirname(os.path.abspath(__file__))
 
+from sys import platform
+if platform == "linux" or platform == "linux2":
+    # linux
+    print("linux")
+elif platform == "darwin":
+    # OS X
+    print("OSX")
+elif platform == "win32":
+    # Windows...
+    print("Windows")
+
+
 root = Tk()
 frm = ttk.Frame(root, padding=10)
 frm.grid()

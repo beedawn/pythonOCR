@@ -1,0 +1,39 @@
+Brandon Schmersal
+Portfolio Entry 1: Skills and Tools
+SWENG 505: Software Project Mgmt
+
+Fall 1 2023
+
+In my current role, | operate within a traditional organizational structure as a "Staff" member. However,
+| have participated in projects with a matrix-style organization. My experience with this structure was a
+positive one, and one of the benefits of the matrix style is it feels less autocratic when juxtaposed with
+the traditional organization style. It feels less autocratic because performance reviews and project
+management are shared between individuals. However, the nature of the siloed teams can lead to
+disjointed communication and execution. The traditional style allows for much more cohesion and, in
+
+turn, creates a more autocratic relationship.
+
+Organizations | have worked at have exposed me to Microsoft Project, Jira, Trello, Asana, and Service
+Now. | have considered using Jira personally but have yet to pursue that. | have primarily used Trello to
+manage my projects or keep virtual notes and lists. Kanban boards are a fantastic way to organize
+activities visually. | have exposure to Lean philosophies in various capacities at previous organizations.
+After reviewing this week's previous coursework regarding Deming's 14 points, | connected Deming's
+
+work and Toyota's Lean. | hold a white belt in Lean Six Sigma and hope to pursue more.
+
+Between my experience as a Retail Supervisor and Floor Manager at a print shop, | have a decent
+amount of exposure to non-software project management. My experience working as a retail supervisor
+was primarily checking in on team members and assigning work to them. However, most of my project
+management and leadership experience is from working at a screen-printing shop. | worked my way into
+
+a "Floor Manager" position at the screen-printing shop. This position had a variety of responsibilities,
+including working with apparel suppliers, collaborating on expectations with clients, estimating time and
+
+cost, and communicating expectations to the team to foster success.
+
+Regarding software-related teams, | have not led any as a project manager. | have not professionally
+developed any project plans or attempted to estimate a software project's time and cost. However,
+thanks to previous coursework here at Penn State, | have a little experience with project estimation with
+tools like COCOMO. | have also used tools like AWS's cost estimator to help determine operational costs
+
+of deployment.
