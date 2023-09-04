@@ -6,8 +6,10 @@
 ## Requires Tesseract:
 ### Linux: 
 >sudo apt-get install tesseract-ocr
+
 or
 >sudo pacman -S tesseract
+
 etc
 ### Mac: 
 >brew install tesseract
