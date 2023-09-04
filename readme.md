@@ -12,6 +12,7 @@ or
 
 etc
 ### Mac: 
+Install homebrew: https://brew.sh/
 >brew install tesseract
 
 ### Windows:
