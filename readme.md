@@ -25,6 +25,13 @@ After installation, open a new command prompt and run
 >tesseract --version
 to verify that Tesseract is installed and accessible from the command line.
 
+
+Install Visual Studio build tools:
+https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170 (leaner)
+Install the C++ Desktop within Visual Studio Build Tool Installer.
+(old link) https://visualstudio.microsoft.com/downloads/ (may be too much)
+
+
 Install Poppler:
 Your script uses Poppler for processing PDF files. To install Poppler on Windows, you can follow these steps:
 
@@ -36,6 +43,8 @@ Extract the contents of the downloaded zip file to a directory of your choice.
 
 Add the path to the directory containing the Poppler executable files (e.g., bin folder) to your system PATH. This allows your script to find the Poppler utilities.
 
+### Alternatively, you can unzip poppler to C:\Program Files\ and rename headless_popplerWin.py to headless.py 
+
 Install Python Libraries:
 Open a command prompt or terminal and use pip to install the required Python libraries for your script. Run the following commands:
 
@@ -44,11 +53,6 @@ Open a command prompt or terminal and use pip to install the required Python lib
 >pip install pytesseract
 >pip install alive-progress
 
-Install Visual Studio build tools:
-https://visualstudio.microsoft.com/downloads/ (may be too much)
-
-https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170 (leaner)
-Install the C++ Desktop within Visual Studio Build Tool Installer.
 
 
 # Usage
