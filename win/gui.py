@@ -72,5 +72,5 @@ ttk.Label(frm, text="Output").grid(column=0, row=2)
 ttk.Button(frm, text="Select", command=lambda: select_file()).grid(column=1, row=2)
 ttk.Label(frm, textvariable=output, width=40).grid(column=2, row=2)
 ttk.Label(root, textvariable=console_out).grid(column=0, row=3)
-
+ttk.Button(root, text='Quit', command=root.destroy).grid(column=0,row=6)
 root.mainloop()
