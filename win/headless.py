@@ -7,7 +7,16 @@ from pdf2image import convert_from_path, pdfinfo_from_path
 from alive_progress import alive_bar
 
 current_working_directory = os.path.dirname(os.path.abspath(__file__))
-poppler_path=r'C:\Program Files\poppler-23.08.0\Library\bin'
+from sys import platform
+if platform == "linux" or platform == "linux2":
+    # linux
+    poppler_path=r''
+elif platform == "darwin":
+    # OS X
+    poppler_path=r''
+elif platform == "win32":
+    # Windows...
+    poppler_path=r'C:\Program Files\poppler-23.08.0\Library\bin'
 #checks if tesseract is installed
 try:
     pytesseract.get_tesseract_version() 
