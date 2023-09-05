@@ -6,16 +6,17 @@
 ## Requires Tesseract:
 ### Linux: 
 >sudo apt-get install tesseract-ocr
+>sudo apt-get install poppler
 
 or
 >sudo pacman -S tesseract
+>>sudo pacman -S poppler
 
 etc
 ### Mac: 
 Install homebrew: https://brew.sh/
 >brew install tesseract
-
-You likely also need xcode installed for poppler to work.
+>brew install poppler
 
 ### Windows:
 
