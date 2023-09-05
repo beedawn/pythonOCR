@@ -14,6 +14,7 @@ or
 
 etc
 ### Mac: 
+Requires Python 3.10+ or else you'll have issues with the gui
 Install homebrew: https://brew.sh/
 >brew install tesseract
 >brew install poppler
