@@ -24,7 +24,7 @@ if not exist "%LocalAppData%\Programs\Python\Python37\python.exe" (
 )
 
 REM Add Python to PATH
-setx PATH "%LocalAppData%\Programs\Python\Python37\;%PATH%" /M
+setx PATH "%PATH%;%LocalAppData%\Programs\Python\Python37\" /M
 echo %tesseractDir%
 REM Install Tesseract if not already installed
 if not exist "%tesseractDir%\tesseract.exe" (
@@ -40,7 +40,7 @@ if not exist "%tesseractDir%\tesseract.exe" (
 )
 
 REM Add Tesseract to PATH
-setx PATH "%tesseractDir%;%PATH%" /M
+setx PATH "%PATH%;%tesseractDir%" /M
 
 REM Install Poppler if not already installed
 if not exist "%popplerDir%\bin\pdftotext.exe" (
@@ -56,7 +56,7 @@ if not exist "%popplerDir%\bin\pdftotext.exe" (
 )
 
 REM Add Poppler to PATH
-setx PATH "%popplerDir%\bin;%PATH%" /M
+setx PATH "%PATH%;%popplerDir%\bin" /M
 
 REM Install the appropriate VC++ redistributable package
 
