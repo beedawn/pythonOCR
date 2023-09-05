@@ -15,6 +15,8 @@ etc
 Install homebrew: https://brew.sh/
 >brew install tesseract
 
+You likely also need xcode installed for poppler to work.
+
 ### Windows:
 
 Install Python:
