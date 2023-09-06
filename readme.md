@@ -19,6 +19,7 @@ Install homebrew: https://brew.sh/
 
 run these after installing homebrew:
 >(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/$USER/.zprofile
+
 >eval "$(/opt/homebrew/bin/brew shellenv)"
 
 After installing homebrew, you could use the installers/install_dependencies_mac.sh script to install dependencies. The script installs Python 3.10.11, tesseract, poppler, and homebrew. It then asks for the path for requirements.txt and attempts to install those.
