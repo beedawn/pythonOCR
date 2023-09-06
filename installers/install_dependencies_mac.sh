@@ -11,7 +11,11 @@ if ! command brew -v &> /dev/null; then
     echo "Installing Homebrew..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/$USER/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+
 fi
+
 
 # Install Tesseract and Poppler via Homebrew
 if ! brew list tesseract &> /dev/null; then
