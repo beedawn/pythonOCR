@@ -16,6 +16,8 @@ etc
 ### Mac: 
 Requires Python 3.10+ or else you'll have issues with the gui
 Install homebrew: https://brew.sh/
+>(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/$USER/.zprofile
+>eval "$(/opt/homebrew/bin/brew shellenv)"
 >brew install tesseract
 >brew install poppler
 
