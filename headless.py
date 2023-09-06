@@ -48,10 +48,10 @@ maxPages = pdfinfo["Pages"]
 
 if args["output"] is not None:
     output_path= args["output"]
-    print("output def: "+ output_path)
+    #print("output def: "+ output_path)
 else:
     output_path= current_working_directory+"\output.txt"
-    print("ouput undef: "+output_path)
+    #print("ouput undef: "+output_path)
 
 def wipeOutput():
     #could be prompt for rewrite of old output file here
@@ -65,10 +65,11 @@ def processpage(images,page):
         for i in range(len(images)):
             images[i].save(temp_dir_final+'/page'+str(i+page)+'.jpg','JPEG')
             #progress bar updater
+            #print(((i+page)/maxPages))
             #bar(((i+page)/maxPages)/4)
 
 
-def converttext():
+def converttext(page):
     f=open(output_path,"a")
     #array so we can add file names to it, to sort
     file_list=[]
@@ -90,12 +91,13 @@ def converttext():
         except:
             print("An error occured")
         i=i+1 #iterate i to help with progress bar
+        print(((i)/maxPages))
         #bar(((i/maxPages)*.75)+.25)
     f.close()
 
 
 
-print("Converting PDF to JPEG")
+#print("Converting PDF to JPEG")
 
 
 #with alive_bar(100, manual=True) as bar:
@@ -104,7 +106,7 @@ for page in range(1, maxPages+1,10):
             #converts pdfs to jpeg
     images = convert_from_path(pdf_file, poppler_path=poppler_path, dpi=200, first_page=page, last_page= min(page+10-1,maxPages))            
     processpage(images,page)
-     
-    print("Converting JPEG to Text via Tesseract")
-    converttext()
+    print((page/maxPages)/2)
+    #print("Converting JPEG to Text via Tesseract")
+converttext(page)
 temp_dir.cleanup()

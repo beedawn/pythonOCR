@@ -44,6 +44,14 @@ def process_file():
     process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
     
     while process.poll() is None:
+        line = process.stdout.readline()
+        if line:
+            try:
+                progress = float(line.strip())
+                if 0<= progress <=1:
+                    pb["value"]=(progress*100)
+            except:
+                pass
         pb.update()
         time.sleep(0.1)
 
@@ -60,9 +68,9 @@ def pb_start():
 def pb_stop():
     pb.stop()
 
-pb = ttk.Progressbar(root, orient='horizontal', mode='indeterminate', length=280)
+pb = ttk.Progressbar(root, orient='horizontal', mode='determinate', length=280,maximum=100)
 pb.grid(column=0, row=2)
-
+pb["value"]=0
 Button(root, text='Process', command=lambda: [pb_start(), threading.Thread(target=process_file).start()]).grid(column=0, row=4)
 
 ttk.Label(frm, text="File Input").grid(column=0, row=1)
