@@ -67,6 +67,9 @@ del VC_redist.x64.exe
 pause
 
 
+set /p requirementsFile=Enter your requirements.txt file: 
+echo You entered: %requirementsFile%
+
 REM Install Python packages from requirements.txt
 echo Installing Python packages from %requirementsFile%...
 pip install -r %requirementsFile%
