@@ -56,7 +56,7 @@ if not exist "%popplerDir%\bin\pdftotext.exe" (
 )
 
 REM Add Poppler to PATH
-setx PATH "%PATH%;%popplerDir%\bin" /M
+setx PATH "%PATH%;%popplerDir%\poppler-23.08.0\Library\bin" /M
 
 REM Install the appropriate VC++ redistributable package
 
