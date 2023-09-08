@@ -12,8 +12,8 @@ if ! command brew -v &> /dev/null; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
     echo "Please run these commands, and run the installer again."
-    echo (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/$USER/.zprofile
-    echo eval "$(/opt/homebrew/bin/brew shellenv)"
+    echo "(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/$USER/.zprofile"
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"'
     exit 0
 fi
 
