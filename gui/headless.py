@@ -12,10 +12,10 @@ def main(gui_input, console_out, gui_output=None):
     from sys import platform
     if platform == "linux" or platform == "linux2":
         # linux
-        poppler_path = r''
+        poppler_path = None
     elif platform == "darwin":
         # OS X
-        poppler_path = r''
+        poppler_path = None
     elif platform == "win32":
         # Windows...
         poppler_path = r'C:\Program Files\poppler-23.08.0\Library\bin'
@@ -28,7 +28,6 @@ def main(gui_input, console_out, gui_output=None):
         print("See readme for details.")
 
         print("Installer script: pip install -r requirements.txt\nRequires Tesseract: on Linux: sudo apt-get install tesseract-ocr\non mac: brew install tesseract\non windows please visit: https://github.com/tesseract-ocr/tessdoc for the binary file\nhttps://github.com/UB-Mannheim/tesseract/wiki\nhttps://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-5.3.1.20230401.exe\nhttps://digi.bib.uni-mannheim.de/tesseract/")
-       
 
     # creates temp dir for image storage
     temp_dir = tempfile.TemporaryDirectory()
@@ -67,7 +66,7 @@ def main(gui_input, console_out, gui_output=None):
             images[i].save(temp_dir_final+'/page'+str(i+page)+'.jpg', 'JPEG')
             # progress bar updater
             # bar(((i+page)/maxPages)/4)
-            #print(i)
+            # print(i)
             try:
                 console_out.set(str(i) + "/" + str(maxPages))
             except Exception as e:
@@ -96,7 +95,7 @@ def main(gui_input, console_out, gui_output=None):
                 print("An error occured")
             i = i+1  # iterate i to help with progress bar
             # bar(((i/maxPages)*.75)+.25)
-            #print(i)
+            # print(i)
             try:
                 console_out.set(str(i) + "/"+str(maxPages))
             except Exception as e:
