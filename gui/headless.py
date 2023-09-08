@@ -68,7 +68,7 @@ def main(gui_input, console_out, gui_output=None):
             # bar(((i+page)/maxPages)/4)
             # print(i)
             try:
-                console_out.set(str(i) + "/" + str(maxPages))
+                console_out.set("Phase 1: "+str(i) + "/" + str(maxPages))
             except Exception as e:
                 console_out.set(str(e))
 
@@ -97,7 +97,8 @@ def main(gui_input, console_out, gui_output=None):
             # bar(((i/maxPages)*.75)+.25)
             # print(i)
             try:
-                console_out.set(str(i) + "/"+str(maxPages))
+                console_out.set("Last Stage: " +
+                                str(i) + "/"+str(maxPages))
             except Exception as e:
                 console_out.set(str(e))
         f.close()

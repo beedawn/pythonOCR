@@ -49,8 +49,8 @@ def process_file():
         # cmd = [sys.executable, os.path.join(current_working_directory, headless_script), '-p', item.get()]
         try:
             # Call the main function directly
-            main(item.get(), console_out)
-            console_out.set("Complete.")
+            #main(item.get(), console_out)
+            console_out.set("Please select output file.")
         except Exception as e:
             console_out.set(str(e))
 
