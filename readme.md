@@ -1,5 +1,7 @@
 
+# pythonOCR
 
+This script will take a PDF file and turn it into raw text using TesseractOCR.
 # Installation:
 
 
@@ -76,7 +78,7 @@ If you'd like to specify output path:
 >python headless.py -p your_pdf_file.pdf -o output_file_path
 # GUI
 If you'd like to use the GUI, run the following script from within the project directory:
-> python gui.py
+> python gui/gui.py
 
 
 
