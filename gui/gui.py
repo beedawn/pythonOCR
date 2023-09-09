@@ -64,11 +64,11 @@ def installer_script():
     from sys import platform
     if platform == "linux" or platform =="linux2":
         operating_sys="linux"
-        install_path="sudo ../installers/install_dependencies_linux.sh"
+        install_path="sudo sh ../installers/install_dependencies_linux.sh"
 
     elif platform == "darwin":
         operating_sys="mac_os"
-        install_path="sudo ../installers/install_dependencies_mac.sh"
+        install_path="sudo sh ../installers/install_dependencies_mac.sh"
     elif platform == "win32":
         operating_sys="win32"
         install_path="../installers/install_dependencies_win.bat"
