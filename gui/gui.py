@@ -73,8 +73,8 @@ def installer_script():
         operating_sys="win32"
         install_path="../installers/install_dependencies_win.bat"
 
-    console_out.set(operating_sys)
-    print(subprocess.run(["echo",install_path], shell=True))
+    
+    subprocess.run(["echo",install_path], shell=True)
 
 
 def pb_start():
