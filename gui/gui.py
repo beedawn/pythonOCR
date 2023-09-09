@@ -74,7 +74,7 @@ def installer_script():
         install_path="../installers/install_dependencies_win.bat"
 
     
-    subprocess.run(["echo",install_path], shell=True)
+    subprocess.run([install_path], shell=True)
 
 
 def pb_start():
