@@ -3,7 +3,7 @@ import threading
 import time
 import os
 import sys
-#import pytesseract
+import pytesseract
 from tkinter import *
 from tkinter import ttk
 from tkinter.filedialog import askopenfile, asksaveasfile
