@@ -1,33 +1,26 @@
 
 
-# Installer script:
->pip install -r requirements.txt
+# Installation:
 
-## Requires Tesseract:
-### Linux: 
+
+## Linux: 
 >sudo apt-get install tesseract-ocr
+
 >sudo apt-get install poppler
 
-or
->sudo pacman -S tesseract
->>sudo pacman -S poppler
+>pip install -r requirements.txt
 
-etc
+
 ### Mac: 
-Requires Python 3.10+ or else you'll have issues with the gui
+Requires Python 3.10+ 
 
 Install homebrew: https://brew.sh/
-
-run these after installing homebrew:
+Run these after installing homebrew, or after your first run of install_dependencies_mac.sh:
 >(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/$USER/.zprofile
 
 >eval "$(/opt/homebrew/bin/brew shellenv)"
 
-After installing homebrew, you could use the installers/install_dependencies_mac.sh script to install dependencies. The script installs Python 3.10.11, tesseract, poppler, and homebrew. It then asks for the path for requirements.txt and attempts to install those.
-
->brew install tesseract
-
->brew install poppler
+After installing homebrew, you can use the installers/install_dependencies_mac.sh script to install dependencies. The script installs Python 3.10.11, tesseract, poppler, and homebrew. It then asks for the path for requirements.txt and attempts to install those.
 
 ### Windows:
 
