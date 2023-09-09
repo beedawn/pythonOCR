@@ -80,7 +80,7 @@ def main(gui_input, console_out, gui_output=None):
         for filename in os.listdir(temp_dir_final):
             file_list.append(filename)
         # reverse list of names since they seem to be backwards initially
-        file_list.reverse()
+        #file_list.reverse()
         # i counter helps with progress bar
         i = 0
         # convert jpg to text
