@@ -24,6 +24,10 @@ After installing homebrew, you can use the installers/install_dependencies_mac.s
 
 ### Windows:
 
+The batch file can be used at installers/install_dependencies_win.bat. Please run the script in both regular and administrator mode.
+Before running the script, ensure you have Python in your PATH variable. After running the script you will need to add the poppler/library/bin and Tesseract to your path.
+
+
 Install Python:
 If you haven't already, download and install Python for Windows from the official Python website (https://www.python.org/downloads/windows/). Make sure to select the option to add Python to your PATH during installation.
 Install Tesseract:
@@ -40,9 +44,6 @@ to verify that Tesseract is installed and accessible from the command line.
 
 Install Visual Studio build tools:
 https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170 (leaner)
-Install the C++ Desktop within Visual Studio Build Tool Installer.
-(old link) https://visualstudio.microsoft.com/downloads/ (may be too much)
-
 
 Install Poppler:
 Your script uses Poppler for processing PDF files. To install Poppler on Windows, you can follow these steps:
@@ -54,8 +55,6 @@ Download the latest release of Poppler for Windows, which includes both the exec
 Extract the contents of the downloaded zip file to a directory of your choice.
 
 Add the path to the directory containing the Poppler executable files (e.g., bin folder) to your system PATH. This allows your script to find the Poppler utilities.
-
-### Alternatively, you can unzip poppler to C:\Program Files\ and rename headless_popplerWin.py to headless.py 
 
 Install Python Libraries:
 Open a command prompt or terminal and use pip to install the required Python libraries for your script. Run the following commands:
