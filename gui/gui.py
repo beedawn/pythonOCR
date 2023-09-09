@@ -71,7 +71,7 @@ def installer_script():
         install_path="sh ../installers/install_dependencies_mac.sh"
     elif platform == "win32":
         operating_sys="win32"
-        install_path="../installers/install_dependencies_win.bat"
+        install_path="..\installers\install_win.bat"
 
     
     subprocess.run([install_path], shell=True)
