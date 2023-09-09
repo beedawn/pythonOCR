@@ -3,7 +3,7 @@ import threading
 import time
 import os
 import sys
-import pytesseract
+#import pytesseract
 from tkinter import *
 from tkinter import ttk
 from tkinter.filedialog import askopenfile, asksaveasfile
@@ -58,6 +58,25 @@ def process_file():
     pb_stop()
 
 
+def installer_script():
+    operating_sys=""
+    install_path=""
+    from sys import platform
+    if platform == "linux" or platform =="linux2":
+        operating_sys="linux"
+        install_path="../installers/install_dependencies_linux.sh"
+
+    elif platform == "darwin":
+        operating_sys="mac_os"
+        install_path="../installers/install_dependencies_mac.sh"
+    elif platform == "win32":
+        operating_sys="win32"
+        install_path="../installers/install_dependencies_win.bat"
+
+    console_out.set(operating_sys)
+    print(subprocess.run(["echo",install_path], shell=True))
+
+
 def pb_start():
     pb.start()
 
@@ -72,7 +91,7 @@ except:
     console_out.set("Install Tesseract")
 
 if py_tesseract_v == None: 
-    ttk.Button(frm, text="Install Tesseract").grid(column=0,row=0)
+    ttk.Button(frm, text="Run Installer Script",command=lambda:installer_script()).grid(column=0,row=0)
 
 pb = ttk.Progressbar(root, orient='horizontal',
                      mode='indeterminate', length=280)
