@@ -3,6 +3,7 @@ import threading
 import time
 import os
 import sys
+import pytesseract
 from tkinter import *
 from tkinter import ttk
 from tkinter.filedialog import askopenfile, asksaveasfile
@@ -64,6 +65,14 @@ def pb_start():
 def pb_stop():
     pb.stop()
 
+py_tesseract_v=None
+try:
+    py_tesseract_v=pytesseract.get_tesseract_version()
+except:
+    console_out.set("Install Tesseract")
+
+if py_tesseract_v == None: 
+    ttk.Button(frm, text="Install Tesseract").grid(column=0,row=0)
 
 pb = ttk.Progressbar(root, orient='horizontal',
                      mode='indeterminate', length=280)
