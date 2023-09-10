@@ -91,22 +91,22 @@ except:
     console_out.set("Install Tesseract")
 
 if py_tesseract_v == None: 
-    ttk.Button(frm, text="Run Installer Script",command=lambda:installer_script()).grid(column=0,row=0)
-
-pb = ttk.Progressbar(root, orient='horizontal',
+    ttk.Label(frm, text="Run Installer Script. See Readme for help.").grid(column=0,row=0)
+else:
+    pb = ttk.Progressbar(root, orient='horizontal',
                      mode='indeterminate', length=280)
-pb.grid(column=0, row=2)
+    pb.grid(column=0, row=2)
 
-Button(root, text='Process', command=lambda: [pb_start(), threading.Thread(
+    Button(root, text='Process', command=lambda: [pb_start(), threading.Thread(
     target=process_file).start()]).grid(column=0, row=4)
 
-ttk.Label(frm, text="File Input").grid(column=0, row=1)
-ttk.Button(frm, text="Open", command=lambda: open_file()).grid(column=1, row=1)
-ttk.Label(frm, textvariable=item, width=40).grid(column=2, row=1)
-ttk.Label(frm, text="Output").grid(column=0, row=2)
-ttk.Button(frm, text="Select", command=lambda: select_file()
+    ttk.Label(frm, text="File Input").grid(column=0, row=1)
+    ttk.Button(frm, text="Open", command=lambda: open_file()).grid(column=1, row=1)
+    ttk.Label(frm, textvariable=item, width=40).grid(column=2, row=1)
+    ttk.Label(frm, text="Output").grid(column=0, row=2)
+    ttk.Button(frm, text="Select", command=lambda: select_file()
            ).grid(column=1, row=2)
-ttk.Label(frm, textvariable=output, width=40).grid(column=2, row=2)
-ttk.Label(root, textvariable=console_out).grid(column=0, row=3)
+    ttk.Label(frm, textvariable=output, width=40).grid(column=2, row=2)
+    ttk.Label(root, textvariable=console_out).grid(column=0, row=3)
 ttk.Button(root, text='Quit', command=root.destroy).grid(column=0, row=6)
 root.mainloop()
