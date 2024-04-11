@@ -1,7 +1,9 @@
 
 # pythonOCR
 
-This script will take a PDF file and turn it into raw text using TesseractOCR.
+This script will take a PDF file and turn it into raw text using OpenCV and TesseractOCR. The application chunks the PDF processing into 10 images at a time, to avoid memory overflow issues on machines with limited memory.
+
+
 # Installation:
 
 
